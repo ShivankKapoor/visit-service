@@ -1,0 +1,13 @@
+services:
+  visit-service-go:
+    build: .
+    image: visit-service-go
+    container_name: visit-service-go
+    restart: unless-stopped
+    ports:
+      - "8088:8088"
+    logging:
+      driver: local
+      options:
+        max-size: "10m"
+        max-file: "10"
